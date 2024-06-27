@@ -1,38 +1,323 @@
+/* 
+  #0303b5
+  #0404e2
+  #4040fb
+  #6565ff
+  #8787fb
+*/
+
+
 .App {
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.divCenter{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 35px;
+  background: #f7f7ff;
+  border: solid #0303b5;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.formTitle{
+  font-size: 20px;
+  font-weight: bold;
+  color: #0303b5;
+  margin-bottom: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.inputsContainer{
+  display: flex;
+  flex-direction: column;
+}
+
+.labelInput{
+  font-size: 14px;
+  font-weight: bold;
+  color: #0303b5;
+  margin-bottom: 5px;
+}
+
+.input{
+  font-size: 14px;
+  width: 250px;
+  margin-bottom: 10px;
+  padding: 5px;
+  border: solid #0303b5 1px;
+}
+
+.input:focus{
+  outline: solid #0303b5 1px;
+  border-radius: 1px;
+}
+
+.buttonContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  gap: 5px;
+}
+
+.button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 5px 15px;
+  color: #0303b5;
+  border: solid #0303b5 2px;
+  background: white;
+}
+
+.button:hover{
+  cursor: pointer;
+  color: white;
+  border: solid #0303b5 2px;
+  background: #4040fb;
+}
+
+.button:focus{
+  outline: solid #0303b5 1px;
+  border-radius: 1px;
+}
+
+.buttonRegisterContainer{
+  width: 100%;
+  margin-top: 15px;
+}
+
+.buttonRegister{
+  color: #0303b5;
+}
+
+.buttonRegister:hover{
+  cursor: pointer;
+  color: #6565ff;
+}
+
+.selectsContainer{
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 10px;
+}
+
+.select{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0303b5;
+  padding: 20px;
+  border: solid #0303b5 2px;
+}
+
+.select:focus{
+  outline: solid #0303b5 1px;
+  border-radius: 1px;
+}
+
+.select:hover{
+  cursor: pointer;
   color: white;
+  border: solid #0303b5 2px;
+  background: #4040fb;
 }
 
-.App-link {
-  color: #61dafb;
+.alertContainer{
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  z-index: 2;
+  height: 100vh;
+  width: 100vw;
+  background: rgba(128, 128, 128, 0.478);
+  backdrop-filter: blur(5px);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.alertDiv{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 200px;
+  width: 350px;
+  padding: 20px;
+  border: solid #0303b5 2px;
+  background: white;
+}
+
+.labelAlert{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #0303b5;
+  height: 150px;
+}
+
+.listContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 70vh;
+  width: 90vw;
+  border: solid #0303b5 2px;
+  background: white;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: 35px;
+  width: 100%;
+  border-bottom: solid 1px #0303b5;
+}
+
+.cell1{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 15vw;
+  font-size: 14px;
+  font-weight: bold;
+  color: #0303b5;
+  border-right: #4040fb solid 1px;
+}
+
+.cell2{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 15vw;
+  font-size: 14px;
+  font-weight: bold;
+  color: #0303b5;
+}
+
+.cell3{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 15vw;
+  font-size: 14px;
+  color: #0303b5;
+  border-right: #4040fb solid 1px;
+}
+
+.cell4{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 15vw;
+}
+
+.deleteText{
+  font-size: 14px;
+  color: #0303b5;
+}
+
+.deleteText:hover{
+  color: #4040fb;
+  cursor: pointer;
+}
+
+.returnContainer{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 90vw;
+  margin-bottom: 20px;
+}
+
+.returnContainerM{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 504px;
+  margin-bottom: 20px;
+}
+
+.returnContainerS{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 334px;
+  margin-bottom: 20px;
+}
+
+.cardContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 70vh;
+  width: auto;
+  padding: 30px 40px;
+  gap: 10px;
+  overflow-y: scroll;
+  border: solid #0303b5 3px;
+  background: white;
+}
+
+.card{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  height: auto;
+  width: 340px;
+  padding: 30px 30px;
+  border: solid #0303b5 2px;
+  background: white;
+}
+
+.labelCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 17px;
+  font-weight: bold;
+  color: #0303b5;
+}
+
+.divInfo{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 250px;
+}
+
+.labelVer{
+  font-size: 17px;
+  color: #0303b5;
+}
+
+.labelVer:hover{
+  cursor: pointer;
+  color: #6565ff;
 }
